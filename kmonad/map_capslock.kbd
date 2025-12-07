@@ -6,10 +6,9 @@
 )
 
 (defsrc
-  esc caps
+  caps
 )
 (deflayer base
-  caps (tap-next esc lctl)
-;;  (tap-hold-next-release 500 esc lctl)
+  (tap-next-press esc lctl)
 )
 
