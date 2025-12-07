@@ -6,9 +6,9 @@
 )
 
 (defsrc
-  caps
+  esc caps
 )
 (deflayer base
-  (tap-next-press esc lctl)
+  caps (tap-next-press esc lctl)
 )
 
