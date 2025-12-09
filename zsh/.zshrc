@@ -223,3 +223,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#9EDEDD'
 #     zdharma-continuum/zinit-annex-rust
 #
 # ### End of Zinit's installer chunk
+
+
+# hyprland 
+function kitty_with_cwd(){
+	kitty --working-directory=$pwd
+}
