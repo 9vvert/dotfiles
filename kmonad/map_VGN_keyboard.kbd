@@ -1,0 +1,15 @@
+(defcfg
+  input  (device-file "/dev/input/by-path/pci-0000:00:14.0-usb-0:3:1.0-event-kbd")
+  output (uinput-sink "VGN keyboard may")
+  fallthrough true
+  allow-cmd false
+)
+
+(defsrc
+  esc caps
+)
+
+(deflayer base
+  caps (tap-next-press esc lctl)
+)
+
