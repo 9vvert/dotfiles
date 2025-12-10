@@ -2,6 +2,8 @@
 kitty_normal_config="$HOME/.config/kitty/kitty_normal.conf"
 kitty_hdmi_config="$HOME/.config/kitty/kitty_hdmi.conf"
 
+monitor_id=$(hyprctl activeworkspace | grep monitorID | head -n 1 | awk '{print $2}')
+
 if [ "$monitor_id" -eq 0 ]; then
 	kitty --config $kitty_normal_config --working-directory "$(hyprcwd)"
 else
