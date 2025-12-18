@@ -124,30 +124,20 @@ alias la='ls -a --color=auto'
 alias lla='ls -la --color=auto'
 alias grep='grep --color=auto'
 
+
+alias tsinghua_login='nu ~/script/Src/tsinghua_networkmgr/tsinghua_networkmgr.nu connect'
+alias tsinghua_logout='nu ~/script/Src/tsinghua_networkmgr/tsinghua_networkmgr.nu disconnect'
+alias enable_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu start'
+alias disable_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu stop'
+alias restart_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu restart'
+alias tsinghua_autoconnect='nu ~/script/Src/tsinghua_connect/tsinghua_connect.nu'
+
 . $HOME/venv14/bin/activate  # commented out by conda initialize
 
 
 # TODO:
 unset http_proxy
 unset https_proxy
-
-
-
-# Terminal Proxy
-function start_proxy() {
-	sudo systemctl start dae.service
-	echo -e "\033[32mStart \033[0mterminal proxy."
-}
-
-function stop_proxy(){
-	sudo systemctl stop dae.service
-	echo -e "\033[31mStop \033[0mterminal proxy."
-}
-
-function restart_proxy(){
-	sudo systemctl restart dae.service
-	echo -e "\033[32mRestart \033[0mterminal proxy."
-}
 
 
 
@@ -230,3 +220,10 @@ function enable_nvm(){
 function kitty_with_cwd(){
 	kitty --working-directory=$pwd
 }
+
+# bun completions
+[ -s "/home/woc/.bun/_bun" ] && source "/home/woc/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
