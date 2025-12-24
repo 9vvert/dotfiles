@@ -1,3 +1,6 @@
 [submodule "waybar"]
 	path = waybar
 	url = https://github.com/9vvert/waybar
+[submodule "nvim-config"]
+	path = nvim-config
+	url = https://github.com/9vvert/nvim-config
