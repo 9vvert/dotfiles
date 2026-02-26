@@ -6,8 +6,9 @@ Keep updating...
 ## Table of Content
 
 ### Window Manager & Desktop
-- hyprland
-- waybar    
+- niri
+- __hyprland__
+- __waybar__
 
 ### terminal & shell
 - tmux

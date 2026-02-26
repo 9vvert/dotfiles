@@ -1,13 +1,46 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+#
+# ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+#
+# if [ ! -d "$ZINIT_HOME" ]; then
+#   mkdir -p "$(dirname $ZINIT_HOME)"
+#   git clone git@github.com:zdharma-continuum/zinit.git "$ZINIT_HOME"
+# fi
+#
+# source "${ZINIT_HOME}/zinit.zsh"
+#
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+#
+# # =============== powerlevel10k =================
+# zinit ice depth=1; zinit light romkatv/powerlevel10k
+# # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#
+# # =============== zsh-completions =================
+# zinit light zsh-users/zsh-completions
+# autoload -U compinit && compinit
+#
+# # =============== zsh-syntax-highlighting =================
+# zinit light zsh-users/zsh-syntax-highlighting
+#
+# # =============== zsh-autosuggestions =================
+# zinit light zsh-users/zsh-autosuggestions
+# bindkey '^e' autosuggest-accept
+
+# # If you come from bash you might have to change your $PATH.
+# export PATH=/opt/riscv/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# # Add ruby path.
+# # export PATH=/home/woc/.local/share/gem/ruby/3.4.0/bin:$PATH
+# export PATH="/opt/qemu/build:/opt/wabt/bin:$HOME/.rbenv/bin:$HOME/.rbenv/versions/3.3.2/:$PATH"
+#
+#
 # Include hidden file
 setopt globdots
-
-
-
-# If you come from bash you might have to change your $PATH.
-export PATH=/opt/riscv/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-# Add ruby path.
-# export PATH=/home/woc/.local/share/gem/ruby/3.4.0/bin:$PATH
-export PATH="/opt/qemu/build:/opt/wabt/bin:$HOME/.rbenv/bin:$HOME/.rbenv/versions/3.3.2/:$PATH"
 
 
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
@@ -127,8 +160,8 @@ alias grep='grep --color=auto'
 
 alias tsinghua_login='nu ~/script/Src/tsinghua_networkmgr/tsinghua_networkmgr.nu connect'
 alias tsinghua_logout='nu ~/script/Src/tsinghua_networkmgr/tsinghua_networkmgr.nu disconnect'
-alias enable_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu start'
-alias disable_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu stop'
+alias start_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu start'
+alias stop_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu stop'
 alias restart_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu restart'
 alias tsinghua_autoconnect='nu ~/script/Src/tsinghua_connect/tsinghua_connect.nu'
 
@@ -227,3 +260,4 @@ function kitty_with_cwd(){
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
