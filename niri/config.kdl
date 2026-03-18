@@ -267,10 +267,20 @@ layout {
     }
 }
 
-
 window-rule {
+  // Rounded corners for a modern look.
+  geometry-corner-radius 20
 	draw-border-with-background false
+
+  // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
 }
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
+
 
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
@@ -278,8 +288,11 @@ window-rule {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "/usr/bin/swaybg" "-i" "/home/woc/Pictures/city.png &"
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "/usr/bin/swaybg" "-i" "/home/woc/Pictures/dawn.png &"
+
+// quick shell
+spawn-at-startup "qs" "-c" "noctalia-shell"
+// spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 // spawn-at-startup "mako"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:

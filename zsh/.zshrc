@@ -261,3 +261,12 @@ function kitty_with_cwd(){
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+
+# NISL 
+NISL_SSID="NISL"
+NISL_PASSWORD="metasploit@nisl213"
+function nisl_connect(){
+  nmcli dev wifi connect $NISL_SSID password $NISL_PASSWORD hidden yes
+}
+
+export IDADIR="/opt/ida9/"
