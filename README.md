@@ -1,19 +1,22 @@
 ## 9vvert's Arch dotfile 
-These are my custom config files for arch system
 
-Keep updating...
+![](screenshot/pure.png)
+
+![](screenshot/overview.png)
 
 ## Table of Content
 
 ### Window Manager & Desktop
 - niri
-- __hyprland__
-- __waybar__
+- quickshell (noctalia)
+- ~~hyprland~~
+- ~~waybar~~
 
 ### terminal & shell
 - tmux
 - zsh
-- kitty
+- ~~kitty~~
+- ghostty
 
 ### keymap
 - kmonad
