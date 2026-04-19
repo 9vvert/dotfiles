@@ -49,9 +49,8 @@
 # resize-overlay-duration = 4s 200ms
 
 theme = dark:Abernathy, light:Breeze
-# theme = dark:ayu,light:ayu_light
-# theme = dankcolors
-# theme = Iceberg Light
+
+font-family = "JetBrains Mono"
 
 background-opacity = 0.85
 
@@ -60,3 +59,7 @@ font-size = 11
 # don't show the resize message
 resize-overlay = never
 
+
+# keybind
+keybind = ctrl+o=toggle_tab_overview
+keybind = shift+enter=text:\x1b\r

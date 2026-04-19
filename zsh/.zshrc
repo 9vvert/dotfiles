@@ -165,6 +165,15 @@ alias stop_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu stop'
 alias restart_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu restart'
 alias tsinghua_autoconnect='nu ~/script/Src/tsinghua_connect/tsinghua_connect.nu'
 
+clash_on() {
+  export http_proxy="127.0.0.1:7897"
+  export https_proxy="127.0.0.1:7897"
+}
+clash_off() {
+  unset http_proxy
+  unset https_proxy
+}
+
 . $HOME/venv14/bin/activate  # commented out by conda initialize
 
 
@@ -261,6 +270,9 @@ function kitty_with_cwd(){
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+#
+export PATH="/home/woc/.local/bin:$PATH"
+
 
 # NISL 
 NISL_SSID="NISL"
@@ -270,3 +282,5 @@ function nisl_connect(){
 }
 
 export IDADIR="/opt/ida9/"
+
+zstyle ':completion:*' matcher-list  'm:{a-z}={A-Za-z}'
