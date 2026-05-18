@@ -258,10 +258,10 @@ function enable_nvm(){
 # ### End of Zinit's installer chunk
 
 
-# hyprland 
-function kitty_with_cwd(){
-	kitty --working-directory=$pwd
-}
+# # hyprland 
+# function kitty_with_cwd(){
+# 	kitty --working-directory=$pwd
+# }
 
 # bun completions
 [ -s "/home/woc/.bun/_bun" ] && source "/home/woc/.bun/_bun"
@@ -284,3 +284,22 @@ function nisl_connect(){
 export IDADIR="/opt/ida9/"
 
 zstyle ':completion:*' matcher-list  'm:{a-z}={A-Za-z}'
+
+
+alias codex="codex --dangerously-bypass-approvals-and-sandbox"
+
+
+launch() { setsid "$@" >/dev/null 2>&1 < /dev/null & disown; }
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/woc/.opam/opam-init/init.zsh' ]] || source '/home/woc/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+#
+
+
+export _JAVA_AWT_WM_NONREPARENTING = 1

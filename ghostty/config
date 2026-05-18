@@ -63,3 +63,4 @@ resize-overlay = never
 # keybind
 keybind = ctrl+o=toggle_tab_overview
 keybind = shift+enter=text:\x1b\r
+# gtk-single-instance = true
