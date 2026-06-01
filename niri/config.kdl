@@ -276,6 +276,19 @@ window-rule {
   clip-to-geometry true
 }
 
+blur {
+    passes 2
+    offset 2
+    noise 0.02
+    saturation 1.2
+}
+
+window-rule {
+    background-effect {
+        blur true
+    }
+}
+
 debug {
   // Allows notification actions and window activation from Noctalia.
   honor-xdg-activation-with-invalid-serial
@@ -407,12 +420,13 @@ binds {
     // Mod+U hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty" "--config" "/home/woc/.config/kitty/kitty_base.conf"; }
 
 
-    Mod+U hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty" "--working-directory=/home/woc" ; }
+    Mod+I hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty" "--working-directory=home"; }
     // Mod+U hotkey-overlay-title="Open a Terminal: Ghostty" {
     //   spawn-sh "if [ \"$(niri msg --json focused-window | jq -r '.app_id // empty')\" = com.mitchellh.ghostty ]; then exec ghostty; else exec ghostty
     //   --working-directory=\"$HOME\"; fi"
     // }
-    Mod+Ctrl+U hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+U hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+Ctrl+U hotkey-overlay-title="Open Noctalia Launcher" { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -672,4 +686,3 @@ binds {
 }
 
 include "./noctalia.kdl"
-

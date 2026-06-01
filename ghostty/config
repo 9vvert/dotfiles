@@ -48,13 +48,22 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = dark:Abernathy, light:Breeze
+working-directory = home
+window-inherit-working-directory = true
+window-decoration = none
+gtk-titlebar = false
+window-show-tab-bar = never
+
+theme = dark:Breeze, light:Breeze
 
 font-family = "JetBrains Mono"
 
 background-opacity = 0.85
 
 font-size = 11
+
+window-padding-x = 8
+window-padding-y = 8
 
 # don't show the resize message
 resize-overlay = never
@@ -63,4 +72,5 @@ resize-overlay = never
 # keybind
 keybind = ctrl+o=toggle_tab_overview
 keybind = shift+enter=text:\x1b\r
+keybind = ctrl+super+i=new_window
 # gtk-single-instance = true
