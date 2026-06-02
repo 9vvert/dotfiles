@@ -77,6 +77,50 @@
         "useSeparateOpacity": true,
         "widgetSpacing": 6,
         "widgets": {
+            "center": [
+                {
+                    "clockColor": "none",
+                    "customFont": "",
+                    "formatHorizontal": "M.d ddd HH:mm",
+                    "formatVertical": "M.d\nddd\nHH\nmm",
+                    "id": "Clock",
+                    "tooltipFormat": "M.d ddd HH:mm",
+                    "useCustomFont": false,
+                    "useMonospacedFont": true,
+                    "usePrimaryColor": true
+                },
+                {
+                    "colorizeDistroLogo": false,
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "customIconPath": "",
+                    "enableColorization": false,
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
+                    "useDistroLogo": true
+                },
+                {
+                    "hideWhenZero": false,
+                    "hideWhenZeroUnread": false,
+                    "iconColor": "none",
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true,
+                    "unreadBadgeColor": "primary"
+                },
+                {
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "customIconPath": "",
+                    "enableColorization": false,
+                    "icon": "rocket",
+                    "iconColor": "none",
+                    "id": "Launcher",
+                    "useDistroLogo": false
+                },
+                {
+                    "id": "WallpaperSelector"
+                }
+            ],
             "left": [
                 {
                     "compactMode": true,
@@ -154,50 +198,6 @@
                 },
                 {
                     "id": "AudioVisualizer"
-                }
-            ],
-            "center": [
-                {
-                    "clockColor": "none",
-                    "customFont": "",
-                    "formatHorizontal": "M.d ddd HH:mm",
-                    "formatVertical": "M.d\nddd\nHH\nmm",
-                    "id": "Clock",
-                    "tooltipFormat": "M.d ddd HH:mm",
-                    "useCustomFont": false,
-                    "useMonospacedFont": true,
-                    "usePrimaryColor": true
-                },
-                {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": true
-                },
-                {
-                    "hideWhenZero": false,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "none",
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
-                },
-                {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
-                },
-                {
-                    "id": "WallpaperSelector"
                 }
             ],
             "right": [
