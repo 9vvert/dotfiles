@@ -33,7 +33,7 @@
         "preferredPlayer": "",
         "spectrumFrameRate": 30,
         "spectrumMirrored": true,
-        "visualizerType": "linear",
+        "visualizerType": "mirrored",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
         "volumeOverdrive": false,
@@ -85,9 +85,7 @@
                     "formatVertical": "M.d\nddd\nHH\nmm",
                     "id": "Clock",
                     "tooltipFormat": "M.d ddd HH:mm",
-                    "useCustomFont": false,
-                    "useMonospacedFont": true,
-                    "usePrimaryColor": true
+                    "useCustomFont": false
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -118,6 +116,7 @@
                     "useDistroLogo": false
                 },
                 {
+                    "iconColor": "none",
                     "id": "WallpaperSelector"
                 }
             ],
@@ -178,7 +177,16 @@
                 },
                 {
                     "colorizeIcons": false,
-                    "id": "Taskbar"
+                    "hideMode": "hidden",
+                    "iconScale": 0.8,
+                    "id": "Taskbar",
+                    "maxTaskbarWidth": 40,
+                    "onlyActiveWorkspaces": true,
+                    "onlySameOutput": true,
+                    "showPinnedApps": true,
+                    "showTitle": false,
+                    "smartWidth": true,
+                    "titleWidth": 120
                 },
                 {
                     "compactMode": false,
@@ -197,15 +205,24 @@
                     "visualizerType": "linear"
                 },
                 {
-                    "id": "AudioVisualizer"
+                    "colorName": "primary",
+                    "hideWhenIdle": false,
+                    "id": "AudioVisualizer",
+                    "width": 200
                 }
             ],
             "right": [
                 {
-                    "id": "Network"
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Network",
+                    "textColor": "none"
                 },
                 {
-                    "id": "Bluetooth"
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Bluetooth",
+                    "textColor": "none"
                 },
                 {
                     "displayMode": "onhover",
@@ -222,23 +239,25 @@
                     "textColor": "none"
                 },
                 {
+                    "iconColor": "none",
                     "id": "DarkMode"
                 },
                 {
-                    "alwaysShowPercentage": false,
                     "deviceNativePath": "__default__",
                     "displayMode": "graphic-clean",
                     "hideIfIdle": false,
                     "hideIfNotDetected": true,
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false,
-                    "warningThreshold": 30
+                    "showPowerProfiles": false
                 },
                 {
-                    "id": "KeepAwake"
+                    "iconColor": "none",
+                    "id": "KeepAwake",
+                    "textColor": "none"
                 },
                 {
+                    "iconColor": "error",
                     "id": "SessionMenu"
                 }
             ]

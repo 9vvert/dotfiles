@@ -157,14 +157,6 @@ alias la='ls -a --color=auto'
 alias lla='ls -la --color=auto'
 alias grep='grep --color=auto'
 
-
-alias tsinghua_login='nu ~/script/Src/tsinghua_networkmgr/tsinghua_networkmgr.nu connect'
-alias tsinghua_logout='nu ~/script/Src/tsinghua_networkmgr/tsinghua_networkmgr.nu disconnect'
-alias start_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu start'
-alias stop_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu stop'
-alias restart_proxy='nu ~/script/Src/dae_proxy/dae_proxy.nu restart'
-alias tsinghua_autoconnect='nu ~/script/Src/tsinghua_connect/tsinghua_connect.nu'
-
 clash_on() {
   export http_proxy="127.0.0.1:7897"
   export https_proxy="127.0.0.1:7897"
@@ -304,3 +296,6 @@ launch() { setsid "$@" >/dev/null 2>&1 < /dev/null & disown; }
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+dae(){
+  nu -c "source scripts/dae.nu; dae $@"
+}
